@@ -1,0 +1,11 @@
+{% extends "base.html" %} {% block content %}
+<h1>Crypto</h1>
+<ul>
+  <h2>Market Caps</h2>
+  {% for coin in coins %}
+  <li>
+    {{ coin.name }}: {{ coin.market_cap }}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}s
