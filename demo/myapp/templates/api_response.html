@@ -4,7 +4,7 @@
   <h2>Market Caps</h2>
   {% for coin in coins %}
   <li>
-    {{ coin.name }}: {{ coin.market_cap }}
+    {{ coin.name }} | {{ coing.symbol }} | : Market Cap {{ coin.market_cap }}, Supply in Circulation: {{ coin.circulating_supply}}
   </li>
   {% endfor %}
 </ul>

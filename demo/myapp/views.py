@@ -12,7 +12,5 @@ def todos(request):
     return render(request, "todos.html", {"todos": items})
 
 def get_crypto(request):
-    get_crypto_api.call_api()
-    get_crypto_api.run()
     items = Crypto.objects.all().order_by('-market_cap')
     return render(request, "api_response.html", {"coins": items})

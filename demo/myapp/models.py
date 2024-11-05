@@ -9,4 +9,8 @@ class TodoItem(models.Model):
 
 class Crypto(models.Model):
     name = models.CharField(max_length=100)
-    market_cap = models.IntegerField(default=False)
+    crypto_id = models.CharField(max_length=100)
+    symbol = models.CharField(max_length=100)
+    image_link = models.URLField(max_length=100)
+    market_cap = models.DecimalField(null=True, blank=True, max_digits=100, decimal_places=2)
+    circulating_supply = models.CharField(null=True, blank=True, max_length=100)
